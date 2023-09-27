@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <title>Random Object</title>
 </head>
 <body>
-<h1>Random Receipt</h1>
-<p>Name: </p>
-<p th:text="${randomObject.name}"></p>
-<p>Image: </p>
-<p><img th:src="${randomObject.pictureLink}" alt="Random Image"></p>
-<p>Category: </p>
-<p th:text="${randomObject.category}"></p>
-<p>Rating: </p>
-<p th:text="${randomObject.getScore()}"></p>
-<p>Instruction: </p>
-<p th:text="${randomObject.instruction}"></p>
-<p> Ingredients: </p>
-<ul>
-    <li th:each="ingredient : ${ingredients}">
-        <span th:text="${ingredient.getName()}">  </span>
-    </li>
-</ul>
-<form action="/random" method="post">
-    <input type="hidden" name="receiptId" th:value="${randomObject.id}">
-    <label for="rating">Rating (0-5):</label>
-    <input type="number" id="rating" name="rating" step="1" min="0" max="5" required><br>
-    <button type="submit">Update Rating</button>
-</form>
+    <p>Name: Nazvanije recepta</p>
+    <p>Image: </p>
+    <p><img src="https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg" alt="Random Image"></p> <!-- Placeholder for ${randomObject.pictureLink} -->
+    <p>Category: Categorija</p>
+    <p>Rating: ot 1 do 5</p>
+    <p>Instruction: (Tut prjam mnogo teksta) Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
+
+    </p>
+    <p> Ingredients: </p>
+    <ul>
+        <li><span>Ingredient 1:</span> 1 cup</li>
+        <li><span>Ingredient 2:</span> 2 tablespoons</li>
+        <li><span>Ingredient 3:</span> 1 teaspoon</li>
+        <li><span>Ingredient 4:</span> 1 cup</li>
+        <li><span>Ingredient 5:</span> 1/2 cup</li>
+        <li><span>Ingredient 6:</span> 3 cloves</li>
+        <li><span>Ingredient 7:</span> 1 bunch</li>
+        <li><span>Ingredient 8:</span> 1 pound</li>
+        <li><span>Ingredient 9:</span> 1/4 cup</li>
+        <li><span>Ingredient 10:</span> 2 teaspoons</li>
+    </ul>
+    <form action="/random" method="post">
+        <input type="hidden" name="receiptId" value=""> <!-- Placeholder for ${randomObject.id} -->
+        <label for="rating">Rating (0-5):</label>
+        <input type="number" id="rating" name="rating" step="1" min="0" max="5" required><br>
+        <button type="submit">Update Rating</button>
+    </form>
 </body>
 </html>
+
