@@ -34,7 +34,7 @@
         </select>
         <label for="foodCategory">Select Products:</label>
 
-
+        <!-- ... other form elements ... -->
         <input type="hidden" id="selectedProductsInput" name="selectedProducts">
         <button type="submit">Submit Selected Products</button>
     </form>
@@ -42,6 +42,10 @@
         <a href = "/random">random</a>
     </div>
 </body>
+
+<script th:inline="javascript">
+        var productList = /*[[${productList}]]*/ [];
+</script>
 
 <script>
         var selectedProducts = [];
