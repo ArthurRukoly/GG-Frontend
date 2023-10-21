@@ -2,39 +2,40 @@
 <html>
 <head>
     <title>Random Object</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e89c536697.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <p>Name: Nazvanije recepta</p>
-    <p>Image: </p>
-    <p><img src="https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg" alt="Random Image"></p> <!-- Placeholder for ${randomObject.pictureLink} -->
-    <p>Category: Categorija</p>
-    <p>Rating: ot 1 do 5</p>
-    <p>Instruction: (Tut prjam mnogo teksta) Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus eius, sed vel esse unde? Animi qui nostrum natus, quidem debitis velit. Perferendis molestiae est corporis facilis veritatis ipsum placeat.
-
-    </p>
-    <p> Ingredients: </p>
-    <ul>
-        <li><span>Ingredient 1:</span> 1 cup</li>
-        <li><span>Ingredient 2:</span> 2 tablespoons</li>
-        <li><span>Ingredient 3:</span> 1 teaspoon</li>
-        <li><span>Ingredient 4:</span> 1 cup</li>
-        <li><span>Ingredient 5:</span> 1/2 cup</li>
-        <li><span>Ingredient 6:</span> 3 cloves</li>
-        <li><span>Ingredient 7:</span> 1 bunch</li>
-        <li><span>Ingredient 8:</span> 1 pound</li>
-        <li><span>Ingredient 9:</span> 1/4 cup</li>
-        <li><span>Ingredient 10:</span> 2 teaspoons</li>
-    </ul>
-    <form action="/random" method="post">
-        <input type="hidden" name="receiptId" value=""> <!-- Placeholder for ${randomObject.id} -->
-        <label for="rating">Rating (0-5):</label>
-        <input type="number" id="rating" name="rating" step="1" min="0" max="5" required><br>
-        <button type="submit">Update Rating</button>
-    </form>
+    <ol class="container">
+        <li class="recipe-item">
+            <h1><span id="recipeName">Nazvanije recepta</span></h1>
+            <p><img id="recipeImage" src="https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg" alt="Random Image"></p>
+            <div class="rating-container" id="recipeRating"></div>
+            <p>Category: <span id="recipeCategory">Categorija</span></p>
+            <button id="toggleInstructionButton">Toggle Instruction</button>
+            <p><span id="recipeInstruction" style="display: none"></span></p>
+            <p> Ingredients: </p>
+            <ul id="recipeIngredients">
+            </ul>
+            <form action="/random" method="post">
+                <input type="hidden" id="recipeId" name="receiptId" value="">
+                <label for="rating">Rating (0-5):</label>
+                <div class="star-rating" id="rating" name="rating">
+                    <i class="far fa-star" data-rating="1"></i>
+                    <i class="far fa-star" data-rating="2"></i>
+                    <i class="far fa-star" data-rating="3"></i>
+                    <i class="far fa-star" data-rating="4"></i>
+                    <i class="far fa-star" data-rating="5"></i>
+                </div>
+                <button type="submit">Update Rating</button>
+            </form>
+            <div class="arrows">
+                <button id="prevRecipe">⬅</button>
+                <button id="nextRecipe">➡</button>
+            </div>
+        </li>
+    </ol>
 </body>
+<script src="script.js"></script>
 </html>
-

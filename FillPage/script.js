@@ -77,7 +77,7 @@ function updateSelectedProductsList(isPreferred) {
         listItem.textContent = product;
 
         var deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
+        deleteButton.textContent = "x";
         deleteButton.addEventListener("click", function () {
             // Remove the selected product from the array and update the list
             var index = productList.indexOf(product);
