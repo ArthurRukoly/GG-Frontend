@@ -12,15 +12,17 @@
             <h1><span id="recipeName">Nazvanije recepta</span></h1>
             <p><img id="recipeImage" src="https://www.themealdb.com/images/media/meals/c7lzrl1683208757.jpg" alt="Random Image"></p>
             <div class="rating-container" id="recipeRating"></div>
-            <p>Category: <span id="recipeCategory">Categorija</span></p>
+            <p class="category">Category: <span id="recipeCategory">Categorija</span></p>
             <button id="toggleInstructionButton">Toggle Instruction</button>
             <p><span id="recipeInstruction" style="display: none"></span></p>
+            <div class="ingredients">
             <p> Ingredients: </p>
             <ul id="recipeIngredients">
+            </div>
             </ul>
             <form action="/random" method="post">
                 <input type="hidden" id="recipeId" name="receiptId" value="">
-                <label for="rating">Rating (0-5):</label>
+                <label for="rating">Rate Recipe:</label>
                 <div class="star-rating" id="rating" name="rating">
                     <i class="far fa-star" data-rating="1"></i>
                     <i class="far fa-star" data-rating="2"></i>

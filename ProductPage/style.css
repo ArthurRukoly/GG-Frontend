@@ -17,7 +17,15 @@ body {
   align-items: center;
   margin: 0;
   height: 100%;
-  font-family: "Your Chosen Font", sans-serif;
+  font-family: "Your Chosen Font", sans-serif;  
+}
+
+.category {
+  margin-bottom: 0.2rem;
+}
+
+.ingredients{
+  margin-bottom: 1rem;
 }
 
 img {
@@ -29,6 +37,18 @@ img {
 
 h1 {
   font-family: "Brush Script MT";
+  font-size: 3rem;
+}
+
+#recipeRating{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.star-rating{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--background-color);
 }
 .container {
   border-radius: 25px;
@@ -119,11 +139,11 @@ button:hover {
   background-color: var(--background-color);
 }
 
-.button,
-button {
+.button, button {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .arrows button{
-  font-size: 4rem;
+  font-size: 2rem;
+  padding: 1.15rem;
 }
