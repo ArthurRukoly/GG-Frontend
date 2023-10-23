@@ -91,7 +91,52 @@ function updateSelectedProductsList(isPreferred) {
         productListElement.appendChild(listItem);
     }
 }
+let isAuthorized= false;
+if (isAuthorized) {
+    $(document).ready(function () {
+      document.getElementById("profile").className = "fa-solid fa-arrow-down";
+      // Hide the extra buttons initially
+      $("#extraButtons").hide();
+      
+      // When you hover over the hoverButton, slide down the extraButtons
+      $("#hoverButton").hover(
+        function () {
+          document.getElementById("profile").className = "fa-solid fa-arrow-up";
+          $("#extraButtons").slideDown();
+        }
+      );
+  
+      // Handle mouseleave event for the container #extraButtons to slide them up
+      $("#extraButtons").mouseleave(function () {
+        document.getElementById("profile").className = "fa-solid fa-arrow-down";
+        $("#extraButtons").slideUp();
+      });
+    });
+  } else {
+    document.getElementById("profile").className = "fa-solid fa-right-to-bracket";
+    $(document).ready(function () {
+      // Hide the extra buttons initially
+      $("#extraButtons").hide();
+    });
+  }
+  
+    
+// $(document).ready(function () {
+//     // Hide the extra buttons initially
+//     $("#extraButtons").hide();
 
+//     // When you hover over the hoverButton, slide down the extraButtons
+//     $("#hoverButton").hover(
+//       function () {
+//         $("#extraButtons").slideDown();
+//       },
+//       function () {
+//         // Handle mouseleave event (optional)
+//         // If you want the extra buttons to slide up when the mouse leaves the hover button
+//         $("#extraButtons").slideUp();
+//       }
+//     );
+//   });
 
 // Update the hidden input field with the selectedProducts array
 function updateHiddenInput() {
@@ -103,3 +148,5 @@ function updateHiddenInput() {
 
 // Call updateHiddenInput() whenever the selectedProducts array changes
 setInterval(updateHiddenInput, 100);
+
+

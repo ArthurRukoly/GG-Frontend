@@ -20,7 +20,7 @@
             <ul id="recipeIngredients">
             </div>
             </ul>
-            <form action="/random" method="post">
+            <form class = "forAuthorized"action="/random" method="post">
                 <input type="hidden" id="recipeId" name="receiptId" value="">
                 <label for="rating">Rate Recipe:</label>
                 <div class="star-rating" id="rating" name="rating">
@@ -30,7 +30,8 @@
                     <i class="far fa-star" data-rating="4"></i>
                     <i class="far fa-star" data-rating="5"></i>
                 </div>
-                <button type="submit">Update Rating</button>
+                <button id="ratingButton" type="submit">Update Rating</button>
+                <div id="tooltip" style="display: none;">This button is disabled.</div>
             </form>
             <div class="arrows">
                 <button id="prevRecipe">⬅</button>

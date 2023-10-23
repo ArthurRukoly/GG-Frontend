@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<script src="https://kit.fontawesome.com/e89c536697.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        #redirect-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        button {
+            margin: 2px 0px 2px 0;
+            padding: 10px 10px 10px 10px;
+            background-color: #193d3b;
+            color: #E4e1b6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 5vw;
+            box-shadow: 0 0 10px rgba(0, 0, 3, 0.5);
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            background-color: #cd5b43;
+        }
+
+
+        .button,
+        button {
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="redirect-button">
+        <button><i class="fa-solid fa-user"></i></button>
+    </div>
+</body>
+
+</html>

@@ -137,5 +137,17 @@ $(document).ready(function () {
     });
 });
 
+function toggleButtonActivity(isDisabled) {
+    if(isDisabled){
+    var ratingButton = document.getElementById("ratingButton");
+    ratingButton.textContent = "Login to Rate!";
+    }
+  }
+
+
+  window.onload = function () {
+    toggleButtonActivity(true); // To disable the button when the page loads
+    // You can set the appropriate boolean value based on your logic
+  };
 // Initialize with the first recipe
 updateRecipe();
